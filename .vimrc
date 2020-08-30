@@ -23,6 +23,8 @@ Plugin 'majutsushi/tagbar' " browse tags of the current file and get an overview
 Plugin 'nathanaelkane/vim-indent-guides' " plugin for visually displaying indent levels in vim
 Plugin 'airblade/vim-gitgutter' " plugin for git diff in the sign column (added, modified and removed lines)
 Plugin 'tpope/vim-fugitive' " plugin for git command (e.g. Gdiff)
+Plugin 'vim-airline/vim-airline' " vim status bar
+Plugin 'vim-airline/vim-airline-themes' " vim status bar themes
 Plugin 'pearofducks/ansible-vim' " vim syntax plugin for ansible 2.x, it supports YAML playbooks, Jinja2 templates, and ansible hosts files
 Plugin 'hashivim/vim-terraform' " vim syntax plugin for terraform
 
@@ -41,6 +43,15 @@ nmap <F8> :Tagbar<CR>
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_auto_color_change_percent = 10
+
+" for vim-airline
+let g:airline#extensions#tabline#enabled = 1 " turn on buffer list
+let g:airline#extensions#whitespace#enabled = 0 " turn off trailing section
+let g:airline_theme='raven' " airline theme
+set laststatus=2 " turn on bottom bar
+let mapleader = ","
+nnoremap <leader>q :bp<CR>
+nnoremap <leader>w :bn<CR>
 
 " for ansible-vim
 au BufRead,BufNewFile *.yml set filetype=yaml.ansible
