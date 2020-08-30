@@ -5,6 +5,7 @@ set tabstop=4 " show existing tab with 4 spaces width
 set shiftwidth=4 " when indenting with '>', use 4 spaces width
 set expandtab  " On pressing tab, insert 4 spaces
 set pastetoggle=<F2> " toggles paste on, off
+set updatetime=100 " for vim-gitgutter update time (1 seconds)
 
 syntax enable
 filetype plugin on
@@ -14,21 +15,28 @@ highlight Comment term=bold cterm=bold ctermfg=4
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'preservim/nerdtree'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'pearofducks/ansible-vim'
-Plugin 'hashivim/vim-terraform'
+Plugin 'VundleVim/Vundle.vim' " vim plugin manager (exe :PluginInstall)
+Plugin 'nanotech/jellybeans.vim' " colorful, dark color scheme, inspired by ir_black and twilight
+Plugin 'preservim/nerdtree' " file system explorer for vim
+Plugin 'majutsushi/tagbar' " browse tags of the current file and get an overview of its structure
+Plugin 'nathanaelkane/vim-indent-guides' " plugin for visually displaying indent levels in vim
+Plugin 'airblade/vim-gitgutter' " plugin for git diff in the sign column (added, modified and removed lines)
+Plugin 'tpope/vim-fugitive' " plugin for git command (e.g. Gdiff)
+Plugin 'pearofducks/ansible-vim' " vim syntax plugin for ansible 2.x, it supports YAML playbooks, Jinja2 templates, and ansible hosts files
+Plugin 'hashivim/vim-terraform' " vim syntax plugin for terraform
 
 call vundle#end()
 
 " for jellybeans
 colorschem jellybeans
 
+" for nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
+" for tagbar
+nmap <F8> :Tagbar<CR>
+
 " for indent-guides 
-" https://github.com/nathanaelkane/vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 1
 let g:indent_guides_auto_color_change_percent = 10
@@ -38,6 +46,3 @@ au BufRead,BufNewFile *.yml set filetype=yaml.ansible
 
 " for vim-terraform
 au BufRead,BufNewFile *.tf.* set filetype=terraform
-let g:terraform_align=1
-let g:terraform_fold_sections=1
-let g:terraform_fmt_on_save=1
