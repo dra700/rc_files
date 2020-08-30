@@ -6,7 +6,6 @@ set shiftwidth=4 " when indenting with '>', use 4 spaces width
 set expandtab  " On pressing tab, insert 4 spaces
 set pastetoggle=<F2> " toggles paste on, off
 set updatetime=100 " for vim-gitgutter update time (1 seconds)
-set mouse+=a " using mouse for vim in an xterm 
 
 syntax enable
 filetype plugin on
@@ -21,6 +20,7 @@ Plugin 'nanotech/jellybeans.vim' " colorful, dark color scheme, inspired by ir_b
 Plugin 'preservim/nerdtree' " file system explorer for vim
 Plugin 'majutsushi/tagbar' " browse tags of the current file and get an overview of its structure
 Plugin 'nathanaelkane/vim-indent-guides' " plugin for visually displaying indent levels in vim
+Plugin 'Raimondi/delimitMate' " automatic closing of quites, parenthesis, brackets, etc
 Plugin 'airblade/vim-gitgutter' " plugin for git diff in the sign column (added, modified and removed lines)
 Plugin 'tpope/vim-fugitive' " plugin for git command (e.g. Gdiff)
 Plugin 'vim-airline/vim-airline' " vim status bar
