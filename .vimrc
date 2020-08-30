@@ -6,6 +6,7 @@ set shiftwidth=4 " when indenting with '>', use 4 spaces width
 set expandtab  " On pressing tab, insert 4 spaces
 set pastetoggle=<F2> " toggles paste on, off
 set updatetime=100 " for vim-gitgutter update time (1 seconds)
+set mouse+=a " using mouse for vim in an xterm 
 
 syntax enable
 filetype plugin on
