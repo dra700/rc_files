@@ -11,6 +11,13 @@ syntax enable
 filetype plugin on
 highlight Comment term=bold cterm=bold ctermfg=4
 
+" disable arrow and pageup, pagedown keys
+for key in ['<Up>', '<Down>', '<Left>', '<Right>', '<PageUp>', '<PageDown>']
+    exec 'noremap' key '<Nop>'
+    exec 'inoremap' key '<Nop>'
+    exec 'cnoremap' key '<Nop>'
+endfor
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
