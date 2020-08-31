@@ -61,7 +61,10 @@ nnoremap <leader>q :bp<CR>
 nnoremap <leader>w :bn<CR>
 
 " for ansible-vim
+let g:ansible_name_highlight = 'd'
+let g:ansible_unindent_after_newline = 1
 au BufRead,BufNewFile *.yml set filetype=yaml.ansible
 
 " for vim-terraform
+let g:terraform_align=1
 au BufRead,BufNewFile *.tf.* set filetype=terraform
