@@ -47,25 +47,25 @@ map <C-n> :NERDTreeToggle<CR>
 nmap <F8> :Tagbar<CR>
 
 " for indent-guides 
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_start_size = 1
-let g:indentguides_spacechar = '┆'
-let g:indentguides_tabchar = '|'
-let g:indentguides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_start_level=2
+let g:indent_guides_start_size=1
+let g:indentguides_spacechar='┆'
+let g:indentguides_tabchar='|'
+let g:indentguides_guide_size=1
 
 " for vim-airline
-let g:airline#extensions#tabline#enabled = 1 " turn on buffer list
-let g:airline#extensions#whitespace#enabled = 0 " turn off trailing section
+let g:airline#extensions#tabline#enabled=1 " turn on buffer list
+let g:airline#extensions#whitespace#enabled=0 " turn off trailing section
 let g:airline_theme='raven' " airline theme
 set laststatus=2 " turn on bottom bar
-let mapleader = ","
+let mapleader=","
 nnoremap <leader>q :bp<CR>
 nnoremap <leader>w :bn<CR>
 
 " for ansible-vim
-let g:ansible_name_highlight = 'd'
-let g:ansible_unindent_after_newline = 1
+let g:ansible_name_highlight='d'
+let g:ansible_unindent_after_newline=1
 au BufRead,BufNewFile *.yml set filetype=yaml.ansible
 
 " for vim-terraform
