@@ -40,7 +40,17 @@ call vundle#end()
 colorschem jellybeans
 
 " for nerdtree
-map <C-n> :NERDTreeToggle<CR>
+" Start NERDTree and leave the cursor in it.
+autocmd VimEnter * NERDTree | wincmd p
+
+" nerdtree show hiddens
+let NERDTreeShowHidden=1
+
+" nerdtree shortcut
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 " for tagbar
 nmap <F8> :Tagbar<CR>
