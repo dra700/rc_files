@@ -10,3 +10,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # install vim plugins
 vim +PluginInstall +qall
+
+# tmux config
+echo source ~/rc_files/.tmux.conf >> ~/.tmux.conf
