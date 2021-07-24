@@ -31,8 +31,9 @@ Plugin 'airblade/vim-gitgutter' " plugin for git diff in the sign column (added,
 Plugin 'tpope/vim-fugitive' " plugin for git command (e.g. Gdiff)
 Plugin 'vim-airline/vim-airline' " vim status bar
 Plugin 'vim-airline/vim-airline-themes' " vim status bar themes
-Plugin 'pearofducks/ansible-vim' " vim syntax plugin for ansible 2.x, it supports YAML playbooks, Jinja2 templates, and ansible hosts files
+Plugin 'pearofducks/ansible-vim' " vim syntax plugin for ansible 2.x, it supports YAL playbooks, Jinja2 templates, and ansible hosts files
 Plugin 'hashivim/vim-terraform' " vim syntax plugin for terraform
+Plugin 'google/vim-jsonnet' " vim syntax plugin for jsonnet
 
 call vundle#end()
 
